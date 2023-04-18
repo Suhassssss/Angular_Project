@@ -28,7 +28,6 @@ this.refreshData();
   reverse: boolean = false;
   sort(){
     this.reverse = !this.reverse;
-    console.log(this.reverse);
     
   }
   ngOnInit(): void {
