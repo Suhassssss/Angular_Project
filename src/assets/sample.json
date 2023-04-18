@@ -29,7 +29,7 @@
 		},
 		{
 			"sourceNE": "192.168.1.33",
-			"securityName": "public",
+			"securityName": "private",
 			"securityModel": "2",
 			"securityLevel": "2]",
 			"eventID": "SNMPV21673349483270",
@@ -56,7 +56,7 @@
 			"message": "1.3.6.1.6.3.1.1.4.1.0:1.3.6.1.6.3.1.1.5.3,1.3.6.1.2.1.1.3.0:4292425465,1.3.6.1.2.1.2.2.1.1.750:750,1.3.6.1.2.1.2.2.1.7.750:1,1.3.6.1.2.1.2.2.1.8.750:2,1.3.6.1.2.1.31.1.1.1.1.750:xe-3/2/2"
 		}, {
 			"sourceNE": "192.168.1.33",
-			"securityName": "public",
+			"securityName": "private",
 			"securityModel": "2",
 			"securityLevel": "4]",
 			"eventID": "SNMPV21673349483270",
@@ -84,7 +84,7 @@
 		},
 		{
 			"sourceNE": "192.168.1.33",
-			"securityName": "public",
+			"securityName": "private",
 			"securityModel": "2",
 			"securityLevel": "6]",
 			"eventID": "SNMPV21673349483270",
@@ -112,7 +112,7 @@
 		},
 		{
 			"sourceNE": "192.168.1.33",
-			"securityName": "public",
+			"securityName": "private",
 			"securityModel": "2",
 			"securityLevel": "8]",
 			"eventID": "SNMPV21673349483270",
@@ -140,7 +140,7 @@
 		},
 		{
 			"sourceNE": "192.168.1.33",
-			"securityName": "public",
+			"securityName": "private",
 			"securityModel": "2",
 			"securityLevel": "10]",
 			"eventID": "SNMPV21673349483270",
