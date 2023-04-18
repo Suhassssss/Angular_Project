@@ -1,1 +1,37 @@
-<p>dynamic-column works!</p>
+<div class="fluid-container">
+    <input type="text" class="form-control" style="width: 200px; display: inline-block; margin-left: 500px;" placeholder="search"
+[(ngModel)]="search"> <br>
+    <table id="dtBasicExample" class="table table-striped table-bordered table-sm" cellspacing="0" width="100%">
+        <thead>
+            <tr>
+                <th>
+                    <input type="checkbox"  name="selectAll">
+                </th>
+                <th *ngFor="let col of columnData" (click)="sort()">{{col}} <i class="fa fa-sort"></i></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let row of data | search:search:reverse">
+                <input type="checkbox">
+                <td>{{row.sourceNE}}</td>
+                <td>{{row.securityName}}</td>
+                <td>{{row.securityModel}}</td>
+                <td>{{row.securityLevel}}</td>
+                <td>{{row.eventID}}</td>
+                <td>{{row.notifTime}}</td>
+                <td>{{row.emsName}}</td>
+                <td>{{row.emsType}}</td>
+                <td>{{row.neType}}</td>
+                <td>{{row.objectType}}</td>
+                <td>{{row.eventType}}</td>
+                <td>{{row.message}}</td>
+            </tr>
+        </tbody>
+    </table>
+    <ngb-pagination [collectionSize]="collectionSize"
+     [(page)]="page" 
+     [pageSize]="pageSize"
+      (pageChange)="refreshData()">
+      
+    </ngb-pagination>
+</div>
