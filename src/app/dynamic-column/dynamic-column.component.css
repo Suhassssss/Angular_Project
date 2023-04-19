@@ -1,0 +1,40 @@
+.containerdiv{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 7vh;
+}
+.maindiv{
+    padding: 5vh 2vw 5vh 2vw;
+    background-color: rgb(243, 242, 242);
+    box-shadow: 0.3vh 0.3vh 2vh rgb(0, 0, 0);
+}
+.tbldiv{
+    width: 90vw;
+    overflow: hidden;
+    overflow-x: scroll;
+}
+.tblhead{
+    width: 20vw;
+    padding: 0vh 2vw 0vh 2vw;
+    background-color: black;
+    color: white;
+}
+.thdata{
+    display: flex; 
+    flex-direction: row; 
+    align-items: center; 
+    justify-content: center;
+}
+
+td{
+    text-align: center;
+}
+tbody tr:nth-child(odd){
+    background-color: rgb(192, 192, 192);
+}
+.checkbox{
+    width: 23px;
+    height: 23px;
+}

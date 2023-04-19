@@ -16,7 +16,7 @@
 	"rows": [{
 			"sourceNE": "192.168.1.33",
 			"securityName": "public",
-			"securityModel": "2",
+			"securityModel": "1",
 			"securityLevel": "1]",
 			"eventID": "SNMPV21673349483270",
 			"notifTime": "2023-01-10 16:48:3",
@@ -29,7 +29,7 @@
 		},
 		{
 			"sourceNE": "192.168.1.33",
-			"securityName": "private",
+			"securityName": "public",
 			"securityModel": "2",
 			"securityLevel": "2]",
 			"eventID": "SNMPV21673349483270",
@@ -43,8 +43,8 @@
 		},
 		{
 			"sourceNE": "192.168.1.33",
-			"securityName": "public",
-			"securityModel": "2",
+			"securityName": "private",
+			"securityModel": "3",
 			"securityLevel": "3]",
 			"eventID": "SNMPV21673349483270",
 			"notifTime": "2023-01-10 16:48:3",
@@ -57,7 +57,7 @@
 		}, {
 			"sourceNE": "192.168.1.33",
 			"securityName": "private",
-			"securityModel": "2",
+			"securityModel": "4",
 			"securityLevel": "4]",
 			"eventID": "SNMPV21673349483270",
 			"notifTime": "2023-01-10 16:48:3",
@@ -71,7 +71,7 @@
 		{
 			"sourceNE": "192.168.1.33",
 			"securityName": "public",
-			"securityModel": "2",
+			"securityModel": "5",
 			"securityLevel": "5]",
 			"eventID": "SNMPV21673349483270",
 			"notifTime": "2023-01-10 16:48:3",
@@ -85,7 +85,7 @@
 		{
 			"sourceNE": "192.168.1.33",
 			"securityName": "private",
-			"securityModel": "2",
+			"securityModel": "6",
 			"securityLevel": "6]",
 			"eventID": "SNMPV21673349483270",
 			"notifTime": "2023-01-10 16:48:3",
@@ -99,7 +99,7 @@
 		{
 			"sourceNE": "192.168.1.33",
 			"securityName": "public",
-			"securityModel": "2",
+			"securityModel": "7",
 			"securityLevel": "7]",
 			"eventID": "SNMPV21673349483270",
 			"notifTime": "2023-01-10 16:48:3",
@@ -113,7 +113,7 @@
 		{
 			"sourceNE": "192.168.1.33",
 			"securityName": "private",
-			"securityModel": "2",
+			"securityModel": "8",
 			"securityLevel": "8]",
 			"eventID": "SNMPV21673349483270",
 			"notifTime": "2023-01-10 16:48:3",
@@ -127,7 +127,7 @@
 		{
 			"sourceNE": "192.168.1.33",
 			"securityName": "public",
-			"securityModel": "2",
+			"securityModel": "9",
 			"securityLevel": "9]",
 			"eventID": "SNMPV21673349483270",
 			"notifTime": "2023-01-10 16:48:3",
@@ -141,7 +141,7 @@
 		{
 			"sourceNE": "192.168.1.33",
 			"securityName": "private",
-			"securityModel": "2",
+			"securityModel": "10",
 			"securityLevel": "10]",
 			"eventID": "SNMPV21673349483270",
 			"notifTime": "2023-01-10 16:48:3",
