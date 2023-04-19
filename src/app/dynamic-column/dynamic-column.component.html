@@ -14,7 +14,7 @@
                 </tr>
             </thead>
             <tbody>
-                <tr *ngFor="let row of data">
+                <tr *ngFor="let row of data | search:search">
                     <td><input class="checkbox" type="checkbox" (change)="selectcount($event)"  [checked]="checked"></td>
                     <td *ngFor="let d of row | dynamicData"> {{d}} </td>
                 </tr>

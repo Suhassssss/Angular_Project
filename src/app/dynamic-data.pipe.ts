@@ -9,7 +9,7 @@ export class DynamicDataPipe implements PipeTransform {
     let arr: any = [];
       for (const iter of Object.values(value)) {
         arr.push(iter);
-        
+       
       }
     return arr;
   }
