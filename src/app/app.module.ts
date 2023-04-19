@@ -8,11 +8,13 @@ import { HttpClientModule } from '@angular/common/http';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { SearchPipe } from './search.pipe';
 import { FormsModule } from '@angular/forms';
+import { DynamicDataPipe } from './dynamic-data.pipe';
 @NgModule({
   declarations: [
     AppComponent,
     DynamicColumnComponent,
-    SearchPipe
+    SearchPipe,
+    DynamicDataPipe
   ],
   imports: [
     BrowserModule,

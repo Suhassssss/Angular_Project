@@ -17,7 +17,7 @@ export class DynamicColumnComponent implements OnInit {
   data = this.rowData;
   checked:boolean = false;
   count: number = 0;
-  selectedMsg: string = "0 row selected";
+  selectedMsg: string = `${this.count}  selected / ${this.pageSize} total`;
   allChecked: boolean = false;
   constructor() { 
 this.refreshData();
@@ -33,13 +33,12 @@ this.refreshData();
     this.reverse = !this.reverse;
   }
   selectcount(arg){
-    console.log(arg.target.checked);
     if (arg.target.checked == true) {
-      this.count++;
+      // this.count++;
+      this.allChecked==true? this.count = 3 : this.count++;
     }
     else this.count--;
-    this.selectedMsg = this.count == 1? `1 row selected`: `${this.count} rows selected`;
-    console.log(this.selectedMsg);
+    this.selectedMsg = `${this.count}  selected / ${this.pageSize} total`;
     if(this.count < this.pageSize){
       this.allChecked = false;
     }
@@ -58,8 +57,7 @@ this.refreshData();
       this.checked = true;
       this.count = this.pageSize;
     }
-    console.log(arg.target.checked);
-    this.selectedMsg = `${this.count} rows selected`;
+    this.selectedMsg = `${this.count}  selected / ${this.pageSize} total`;
   }
   ngOnInit(): void {
   }

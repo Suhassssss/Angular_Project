@@ -14,20 +14,9 @@
                 </tr>
             </thead>
             <tbody>
-                <tr *ngFor="let row of data | search:search:reverse">
+                <tr *ngFor="let row of data">
                     <td><input class="checkbox" type="checkbox" (change)="selectcount($event)"  [checked]="checked"></td>
-                    <td>{{row.sourceNE}}</td>
-                    <td>{{row.securityName}}</td>
-                    <td>{{row.securityModel}}</td>
-                    <td>{{row.securityLevel}}</td>
-                    <td>{{row.eventID}}</td>
-                    <td>{{row.notifTime}}</td>
-                    <td>{{row.emsName}}</td>
-                    <td>{{row.emsType}}</td>
-                    <td>{{row.neType}}</td>
-                    <td>{{row.objectType}}</td>
-                    <td>{{row.eventType}}</td>
-                    <td>{{row.message}}</td>
+                    <td *ngFor="let d of row | dynamicData"> {{d}} </td>
                 </tr>
             </tbody>
         </table>
