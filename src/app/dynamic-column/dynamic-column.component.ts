@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NgForm } from '@angular/forms';
 import * as sampleData from 'src/assets/sample.json';
 @Component({
   selector: 'app-dynamic-column',
@@ -9,6 +10,7 @@ export class DynamicColumnComponent implements OnInit {
 
   columnData: any = sampleData.columns;
   rowData: any = sampleData.rows;
+
   // page = 4;
   page = 1;
   pageSize = 3;
@@ -24,6 +26,8 @@ this.refreshData();
     
   }
   refreshData() {
+    this.count = 0;
+    this.selectedMsg = `${this.count}  selected / ${this.pageSize} total`;
     this.data = this.rowData
       .slice((this.page - 1) * this.pageSize, (this.page - 1) * this.pageSize + this.pageSize);
     
@@ -33,29 +37,30 @@ this.refreshData();
     this.reverse = !this.reverse;
   }
   selectcount(arg){
-    if (arg.target.checked == true) {
-      // this.count++;
-      this.allChecked==true? this.count = 3 : this.count++;
+    console.log(arg);
+    
+    if(arg == true){
+      this.count++;
+      this.selectedMsg = `${this.count}  selected / ${this.pageSize} total`;
+      console.log("checked");
+      
     }
-    else this.count--;
-    this.selectedMsg = `${this.count}  selected / ${this.pageSize} total`;
-    if(this.count < this.pageSize){
-      this.allChecked = false;
-    }
-    if(this.count === this.pageSize){
-      this.allChecked = true;
+    else {
+      this.count--;
+      this.selectedMsg= `${this.count}  selected / ${this.pageSize} total`;
+      console.log("unchecked");
     }
       }
-  selectAll(arg){
+  selectAll(arg, length){
     this.checked = true;
     this.allChecked = !this.allChecked;
     if (arg.target.checked == false) {
-      this.count=0;
       this.checked = false;
+      this.count = 0;
     }
     else{
       this.checked = true;
-      this.count = this.pageSize;
+      this.count = this.data.length;
     }
     this.selectedMsg = `${this.count}  selected / ${this.pageSize} total`;
   }

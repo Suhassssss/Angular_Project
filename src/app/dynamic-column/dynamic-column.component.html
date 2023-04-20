@@ -8,15 +8,16 @@
             <thead>
                 <tr>
                     <th class="tblhead">
-                        <input class="checkbox" (change)="selectAll($event)" type="checkbox" [checked]="allChecked">
+                        <input class="checkbox" (change)="selectAll($event, data)" type="checkbox" [checked]="allChecked">
                     </th>
                     <th class="tblhead">Action</th>
                     <th *ngFor="let col of columnData" class="tblhead" (click)="sort()"><span class="thdata"><span> {{col}} </span> &nbsp;<i style="line-height: 12vh;" class="fa fa-sort"></i></span></th>
                 </tr>
             </thead>
             <tbody>
-                <tr *ngFor="let row of data | search:search:reverse">
-                    <td><input class="checkbox" type="checkbox" (change)="selectcount($event)"  [checked]="checked"></td>
+                
+                <tr *ngFor="let row of data | search:search:reverse, let i = index">
+                    <td><input class="checkbox" name="select" type="checkbox" [(ngModel)]="row.checked"  (ngModelChange)="selectcount($event)" [checked]="checked"></td>
                     <td class="edit">
                         <button><i class="fa fa-pencil" aria-hidden="true"></i></button>
                         &nbsp;
@@ -24,6 +25,7 @@
                     </td>
                     <td *ngFor="let d of row | dynamicData"> {{d}} </td>
                 </tr>
+            
             </tbody>
         </table>
       </div>
