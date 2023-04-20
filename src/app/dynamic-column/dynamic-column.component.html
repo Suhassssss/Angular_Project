@@ -3,19 +3,25 @@
         <br>
         <input type="text" class="form-control" style="width: 200px; display: inline-block;" placeholder="search"
     [(ngModel)]="search"> <br><br>
-      <div class="tbldiv">
+    <div class="tbldiv">
         <table class="tbl">
             <thead>
                 <tr>
                     <th class="tblhead">
                         <input class="checkbox" (change)="selectAll($event)" type="checkbox" [checked]="allChecked">
                     </th>
+                    <th class="tblhead">Action</th>
                     <th *ngFor="let col of columnData" class="tblhead" (click)="sort()"><span class="thdata"><span> {{col}} </span> &nbsp;<i style="line-height: 12vh;" class="fa fa-sort"></i></span></th>
                 </tr>
             </thead>
             <tbody>
                 <tr *ngFor="let row of data | search:search:reverse">
                     <td><input class="checkbox" type="checkbox" (change)="selectcount($event)"  [checked]="checked"></td>
+                    <td class="edit">
+                        <button><i class="fa fa-pencil" aria-hidden="true"></i></button>
+                        &nbsp;
+                        <button><i class="fa fa-trash" aria-hidden="true"></i></button>
+                    </td>
                     <td *ngFor="let d of row | dynamicData"> {{d}} </td>
                 </tr>
             </tbody>
@@ -25,7 +31,7 @@
         <ngb-pagination [collectionSize]="collectionSize"
          [(page)]="page" 
          [pageSize]="pageSize"
-          (pageChange)="refreshData()">
+         (pageChange)="refreshData()">
         </ngb-pagination>
         <span>{{selectedMsg}}</span>
     </div>

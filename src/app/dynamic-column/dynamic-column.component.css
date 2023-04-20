@@ -38,3 +38,13 @@ tbody tr:nth-child(odd){
     width: 23px;
     height: 23px;
 }
+.edit button{
+    border: none;
+    background-color: transparent;
+}
+.edit button .fa-pencil{
+    color: rgb(15, 0, 226);
+}
+.edit button .fa-trash{
+    color: rgb(255, 30, 0);
+}
